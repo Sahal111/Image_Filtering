@@ -46,8 +46,7 @@ Keduanya diberi citra ber-noise yang sama dan ukuran kernel yang sama, lalu hasi
 
 ## Features
 
-- Membaca gambar dari file JPG/PNG dengan OpenCV.
-- Memakai **gambar sintetis** buatan sendiri sebagai fallback jika file gambar tidak ditemukan.
+- Membaca gambar dari file JPG/PNG dengan OpenCV, dengan pesan error yang jelas jika file tidak ditemukan atau tidak valid.
 - Mengubah citra RGB menjadi grayscale.
 - Menambahkan salt-and-pepper noise dengan tingkat noise dan seed yang dapat diatur.
 - Menerapkan Gaussian Blur dan Median Filter.
@@ -171,12 +170,12 @@ Semua pengaturan berupa variabel di sel notebook:
 
 Langkah singkat:
 
-1. Simpan gambar JPG/PNG Anda di folder yang sama dengan notebook.
+1. Gunakan `foto.jpg` bawaan, atau simpan gambar JPG/PNG Anda di folder yang sama dengan notebook.
 2. Ubah `NAMA_FILE_GAMBAR` sesuai nama file.
 3. Sesuaikan `TINGKAT_NOISE`, `SEED_ACAK`, dan `UKURAN_KERNEL` jika perlu.
 4. Jalankan seluruh sel (*Run All*).
 
-Jika file gambar tidak ditemukan, notebook otomatis memakai gambar sintetis buatan sendiri. Jika file ada tetapi tidak valid, notebook menampilkan pesan error.
+Jika file gambar tidak ditemukan atau tidak valid, notebook menampilkan pesan error (`FileNotFoundError` atau `ValueError`).
 
 ## Evaluation Metrics
 
@@ -207,14 +206,14 @@ Keduanya tidak selalu sejalan dengan kesan visual, sehingga hasil sebaiknya diba
 .
 ├── Operasi_Dasar_Citra_Digital_Gaussian_Median.ipynb   # Notebook utama
 ├── README.md
-├── foto.jpg
+├── foto.jpg                                            # Gambar input
 └── assets/
     ├── 01-asli-vs-grayscale.png
     ├── 02-perbandingan-filter.png
     └── 03-eksperimen-kernel.png
 ```
 
-> Foto input yang dirujuk `NAMA_FILE_GAMBAR` tidak disertakan dalam struktur di atas. Tambahkan gambar Anda sendiri di folder yang sama dengan notebook.
+> `foto.jpg` adalah gambar bawaan yang dirujuk `NAMA_FILE_GAMBAR`. Untuk memakai gambar lain, letakkan di folder yang sama dengan notebook dan ubah nilai `NAMA_FILE_GAMBAR`.
 
 ## Learning Objectives
 
