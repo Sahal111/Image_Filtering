@@ -119,8 +119,8 @@ Repository ini belum menyertakan `requirements.txt`, sehingga dependency diinsta
 **1. Clone repository**
 
 ```bash
-git clone <URL-REPOSITORY-ANDA>
-cd <NAMA-FOLDER-REPOSITORY>
+git clone https://github.com/Sahal111/Image_Filtering.git
+cd Image_Filtering
 ```
 
 **2. Buat virtual environment**
@@ -155,7 +155,7 @@ jupyter notebook
 # pip install jupyterlab && jupyter lab
 ```
 
-Buka `Operasi_Dasar_Citra_Digital_Gaussian_Median-2.ipynb`, lalu jalankan sel dari atas ke bawah.
+Buka `Operasi_Dasar_Citra_Digital_Gaussian_Median.ipynb`, lalu jalankan sel dari atas ke bawah.
 
 ## How to Use
 
@@ -163,7 +163,7 @@ Semua pengaturan berupa variabel di sel notebook:
 
 | Variabel | Fungsi | Contoh |
 |---|---|---|
-| `NAMA_FILE_GAMBAR` | Nama file gambar JPG/PNG di folder yang sama dengan notebook | `"foto_saya.jpg"` |
+| `NAMA_FILE_GAMBAR` | Nama file gambar JPG/PNG di folder yang sama dengan notebook | `"foto.jpg"` |
 | `TINGKAT_NOISE` | Proporsi piksel yang terkena noise (0.05 = 5%) | `0.10` |
 | `SEED_ACAK` | Seed acak agar hasil dapat diulang | `123` |
 | `UKURAN_KERNEL` | Ukuran kernel untuk perbandingan utama (harus ganjil) | `7` |
@@ -205,8 +205,9 @@ Keduanya tidak selalu sejalan dengan kesan visual, sehingga hasil sebaiknya diba
 
 ```text
 .
-├── Operasi_Dasar_Citra_Digital_Gaussian_Median-2.ipynb   # Notebook utama
+├── Operasi_Dasar_Citra_Digital_Gaussian_Median.ipynb   # Notebook utama
 ├── README.md
+├── foto.jpg
 └── assets/
     ├── 01-asli-vs-grayscale.png
     ├── 02-perbandingan-filter.png
